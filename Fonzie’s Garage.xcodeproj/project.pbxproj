@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52D5D4CB1EFE899A006AAE1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5D4CA1EFE899A006AAE1D /* main.m */; };
+		52D5D4CE1EFE899A006AAE1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5D4CD1EFE899A006AAE1D /* AppDelegate.m */; };
+		52D5D4D11EFE899A006AAE1D /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5D4D01EFE899A006AAE1D /* MasterViewController.m */; };
+		52D5D4D41EFE899A006AAE1D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5D4D31EFE899A006AAE1D /* DetailViewController.m */; };
+		52D5D4D71EFE899A006AAE1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D5D4D51EFE899A006AAE1D /* Main.storyboard */; };
+		52D5D4D91EFE899A006AAE1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D5D4D81EFE899A006AAE1D /* Assets.xcassets */; };
+		52D5D4DC1EFE899A006AAE1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D5D4DA1EFE899A006AAE1D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		52D5D4C61EFE899A006AAE1D /* Fonzie’s Garage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fonzie’s Garage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52D5D4CA1EFE899A006AAE1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52D5D4CC1EFE899A006AAE1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		52D5D4CD1EFE899A006AAE1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		52D5D4CF1EFE899A006AAE1D /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		52D5D4D01EFE899A006AAE1D /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		52D5D4D21EFE899A006AAE1D /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		52D5D4D31EFE899A006AAE1D /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		52D5D4D61EFE899A006AAE1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52D5D4D81EFE899A006AAE1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52D5D4DB1EFE899A006AAE1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52D5D4DD1EFE899A006AAE1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52D5D4C31EFE8999006AAE1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52D5D4BD1EFE8999006AAE1D = {
+			isa = PBXGroup;
+			children = (
+				52D5D4C81EFE899A006AAE1D /* Fonzie’s Garage */,
+				52D5D4C71EFE899A006AAE1D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52D5D4C71EFE899A006AAE1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52D5D4C61EFE899A006AAE1D /* Fonzie’s Garage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52D5D4C81EFE899A006AAE1D /* Fonzie’s Garage */ = {
+			isa = PBXGroup;
+			children = (
+				52D5D4CC1EFE899A006AAE1D /* AppDelegate.h */,
+				52D5D4CD1EFE899A006AAE1D /* AppDelegate.m */,
+				52D5D4CF1EFE899A006AAE1D /* MasterViewController.h */,
+				52D5D4D01EFE899A006AAE1D /* MasterViewController.m */,
+				52D5D4D21EFE899A006AAE1D /* DetailViewController.h */,
+				52D5D4D31EFE899A006AAE1D /* DetailViewController.m */,
+				52D5D4D51EFE899A006AAE1D /* Main.storyboard */,
+				52D5D4D81EFE899A006AAE1D /* Assets.xcassets */,
+				52D5D4DA1EFE899A006AAE1D /* LaunchScreen.storyboard */,
+				52D5D4DD1EFE899A006AAE1D /* Info.plist */,
+				52D5D4C91EFE899A006AAE1D /* Supporting Files */,
+			);
+			path = "Fonzie’s Garage";
+			sourceTree = "<group>";
+		};
+		52D5D4C91EFE899A006AAE1D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52D5D4CA1EFE899A006AAE1D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52D5D4C51EFE8999006AAE1D /* Fonzie’s Garage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52D5D4E01EFE899A006AAE1D /* Build configuration list for PBXNativeTarget "Fonzie’s Garage" */;
+			buildPhases = (
+				52D5D4C21EFE8999006AAE1D /* Sources */,
+				52D5D4C31EFE8999006AAE1D /* Frameworks */,
+				52D5D4C41EFE8999006AAE1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fonzie’s Garage";
+			productName = "Fonzie’s Garage";
+			productReference = 52D5D4C61EFE899A006AAE1D /* Fonzie’s Garage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52D5D4BE1EFE8999006AAE1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Exelon Corporation";
+				TargetAttributes = {
+					52D5D4C51EFE8999006AAE1D = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 52D5D4C11EFE8999006AAE1D /* Build configuration list for PBXProject "Fonzie’s Garage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52D5D4BD1EFE8999006AAE1D;
+			productRefGroup = 52D5D4C71EFE899A006AAE1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52D5D4C51EFE8999006AAE1D /* Fonzie’s Garage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52D5D4C41EFE8999006AAE1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52D5D4DC1EFE899A006AAE1D /* LaunchScreen.storyboard in Resources */,
+				52D5D4D91EFE899A006AAE1D /* Assets.xcassets in Resources */,
+				52D5D4D71EFE899A006AAE1D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52D5D4C21EFE8999006AAE1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52D5D4CE1EFE899A006AAE1D /* AppDelegate.m in Sources */,
+				52D5D4D11EFE899A006AAE1D /* MasterViewController.m in Sources */,
+				52D5D4CB1EFE899A006AAE1D /* main.m in Sources */,
+				52D5D4D41EFE899A006AAE1D /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		52D5D4D51EFE899A006AAE1D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52D5D4D61EFE899A006AAE1D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52D5D4DA1EFE899A006AAE1D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52D5D4DB1EFE899A006AAE1D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52D5D4DE1EFE899A006AAE1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52D5D4DF1EFE899A006AAE1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52D5D4E11EFE899A006AAE1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Fonzie’s Garage/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.exeloncorp.Fonzie-s-Garage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		52D5D4E21EFE899A006AAE1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Fonzie’s Garage/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.exeloncorp.Fonzie-s-Garage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52D5D4C11EFE8999006AAE1D /* Build configuration list for PBXProject "Fonzie’s Garage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52D5D4DE1EFE899A006AAE1D /* Debug */,
+				52D5D4DF1EFE899A006AAE1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52D5D4E01EFE899A006AAE1D /* Build configuration list for PBXNativeTarget "Fonzie’s Garage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52D5D4E11EFE899A006AAE1D /* Debug */,
+				52D5D4E21EFE899A006AAE1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52D5D4BE1EFE8999006AAE1D /* Project object */;
+}
