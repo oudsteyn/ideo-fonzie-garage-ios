@@ -1,163 +1,78 @@
 //
-//  MasterViewController.m
+//  WorkOrderModel.m
 //  Fonzie’s Garage
 //
-//  Created by John Oudsteyn on 6/24/17.
+//  Created by John Oudsteyn on 6/26/17.
 //  Copyright © 2017 Exelon Corporation. All rights reserved.
 //
 
-#import "MasterViewController.h"
-#import "DetailViewController.h"
 #import "WorkOrderModel.h"
 #import "WorkOrder.h"
-#import "WorkOrderItem.h"
-#import "Vehicle.h"
 
-@interface MasterViewController () {
-    WorkOrderModel *model;
-    UIRefreshControl* refreshControl;
-    //NSTimer *refreshTimer;
+@implementation WorkOrderModel
 
+static NSMutableArray<WorkOrder *> *orders;
+//static NSMutableArray<id> *delegates;
+
++ (NSMutableArray<WorkOrder *> *)current
+{
+    return orders;
 }
-
-@property NSMutableArray<WorkOrder *> *objects;
-@end
-
-@implementation MasterViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    model = [[WorkOrderModel alloc] init];
-    model.delegate = self;
-    // Do any additional setup after loading the view, typically from a nib.
-    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    //UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    //self.navigationItem.rightBarButtonItem = addButton;
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
-
-    refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self action:@selector(fetchOpenWorkOrders) forControlEvents:UIControlEventValueChanged];
-
-    self.tableView.refreshControl = refreshControl;
-
-    [self fetchOpenWorkOrders];
-}
-
-
-- (void)viewWillAppear:(BOOL)animated {
-    self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
-    [super viewWillAppear:animated];
-}
-
 
 /*
-- (void)dealloc {
-    [refreshTimer invalidate];
-    refreshTimer = nil;
++ (void)addDelegate
+{
+    if (!delegates) {
+        
+    }
 }
 */
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (WorkOrder *)findWorkOrder:(NSNumber *)number
+{
+    for (WorkOrder *obj in orders){
+        if([obj.number intValue] == [number intValue])
+            return obj;
+    }
+    
+    return nil;
 }
 
-
-- (void)insertNewObject:(id)sender {
-    //if (!self.objects) {
-    //    self.objects = [[NSMutableArray alloc] init];
-    //}
-    //[self.objects insertObject:[NSDate date] atIndex:0];
-    //NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    //[self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
-
-
-#pragma mark - Segues
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        WorkOrder *wo = self.objects[indexPath.row];
-        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setWorkOrder:wo];
-        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-        controller.navigationItem.leftItemsSupplementBackButton = YES;
+- (void)updateWorkOrder:(WorkOrder *)workOrder {
+    for(int i = 0; i < orders.count; i++) {
+        if([orders[i].number intValue] == [workOrder.number intValue]) {
+            [orders removeObjectAtIndex:i];
+            [orders insertObject:workOrder atIndex:i];
+            break;
+        }
     }
 }
 
-
-#pragma mark - Table View
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    self.objects = [WorkOrderModel current];
-    return self.objects.count;
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    WorkOrder *wo = self.objects[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@ %@",
-     wo.vehicle.year, wo.vehicle.make, wo.vehicle.model];
-    
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"WO: %@    Status: %@", [NSString stringWithFormat:@"%04d", [wo.number intValue]], wo.status];
-    return cell;
-}
-
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return NO;
-}
-
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+- (void)startWorkOrderRefresh
+{
+    if( self.delegate && [self.delegate respondsToSelector:@selector(workOrderWillRefreshModel:)] ) {
+        [self.delegate workOrderWillRefreshModel:self];
     }
-}
-
--(void) workOrderDidFinishRefresh:(NSMutableArray<WorkOrder *>*)workOrders {
-    self.objects = workOrders;
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.tableView reloadData];
-        [refreshControl endRefreshing];
-    });
-}
-
-- (void)fetchOpenWorkOrders {
-    [model startWorkOrderRefresh];
-}
-/*
-- (void)fetchOpenWorkOrders {
+    
     NSDictionary *headers = @{ @"content-type": @"application/x-www-form-urlencoded",
                                @"x-api-key": @"SsjA0MdYOGag8xSmLomllZ0wk2zp2s1GrXrBxhWuwt",
                                @"cache-control": @"no-cache" };
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://ideo-autonet-node.run.aws-usw02-pr.ice.predix.io/api/work-order/open"]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://ideo-autonet-node.run.aws-usw02-pr.ice.predix.io/api/work-order"]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
     [request setAllHTTPHeaderFields:headers];
     
     NSURLSession *session = [NSURLSession sharedSession];
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    configuration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+    session = [NSURLSession sessionWithConfiguration:configuration];
+
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
                                                 completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                                    [refreshControl endRefreshing];
                                                     
                                                     if (error) {
                                                         NSLog(@"%@", error);
@@ -217,23 +132,15 @@
                                                             [list addObject:wo];
                                                         }
                                                         
-                                                        self.objects = list;
+                                                        orders = list;
                                                         
-                                                        dispatch_async(dispatch_get_main_queue(), ^{
-                                                            [self.tableView reloadData];
-                                                        });
-                                                        
-                                                        /*
-                                                        refreshTimer = [NSTimer scheduledTimerWithTimeInterval:5.0
-                                                                                                        target:self
-                                                                                                      selector:@selector(fetchOpenWorkOrders)
-                                                                                                      userInfo:nil
-                                                                                                        repeats:NO];
- 
-                                                        NSLog(@"%@", workOrders);
+                                                        if (self.delegate && [self.delegate respondsToSelector:@selector(workOrderDidFinishRefresh:)]) {
+                                                            [self.delegate workOrderDidFinishRefresh:orders];
+                                                        }
+                                                        NSLog(@"%@", orders);
                                                     }
                                                 }];
     [dataTask resume];
 }
-*/
+
 @end

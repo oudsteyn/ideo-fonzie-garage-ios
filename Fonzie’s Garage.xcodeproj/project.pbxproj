@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52CE78561F0178BF00240AA9 /* WorkOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CE78551F0178BF00240AA9 /* WorkOrderModel.m */; };
 		52D5D4CB1EFE899A006AAE1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5D4CA1EFE899A006AAE1D /* main.m */; };
 		52D5D4CE1EFE899A006AAE1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5D4CD1EFE899A006AAE1D /* AppDelegate.m */; };
 		52D5D4D11EFE899A006AAE1D /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5D4D01EFE899A006AAE1D /* MasterViewController.m */; };
@@ -14,9 +15,17 @@
 		52D5D4D71EFE899A006AAE1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D5D4D51EFE899A006AAE1D /* Main.storyboard */; };
 		52D5D4D91EFE899A006AAE1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D5D4D81EFE899A006AAE1D /* Assets.xcassets */; };
 		52D5D4DC1EFE899A006AAE1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D5D4DA1EFE899A006AAE1D /* LaunchScreen.storyboard */; };
+		52D5D4E51F002342006AAE1D /* WorkOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5D4E41F002342006AAE1D /* WorkOrder.m */; };
+		52D5D4E81F00242A006AAE1D /* WorkOrderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5D4E71F00242A006AAE1D /* WorkOrderItem.m */; };
+		52D5D4EB1F002AD9006AAE1D /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5D4EA1F002AD9006AAE1D /* Vehicle.m */; };
+		52D5D4EE1F005034006AAE1D /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5D4ED1F005034006AAE1D /* HistoryViewController.m */; };
+		52D5D4F11F005D24006AAE1D /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5D4F01F005D24006AAE1D /* History.m */; };
+		52D5D4F71F0096E0006AAE1D /* ItemsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5D4F61F0096E0006AAE1D /* ItemsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52CE78541F0178BF00240AA9 /* WorkOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkOrderModel.h; sourceTree = "<group>"; };
+		52CE78551F0178BF00240AA9 /* WorkOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkOrderModel.m; sourceTree = "<group>"; };
 		52D5D4C61EFE899A006AAE1D /* Fonzie’s Garage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fonzie’s Garage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D5D4CA1EFE899A006AAE1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52D5D4CC1EFE899A006AAE1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +38,18 @@
 		52D5D4D81EFE899A006AAE1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52D5D4DB1EFE899A006AAE1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52D5D4DD1EFE899A006AAE1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52D5D4E31F002342006AAE1D /* WorkOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkOrder.h; sourceTree = "<group>"; };
+		52D5D4E41F002342006AAE1D /* WorkOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkOrder.m; sourceTree = "<group>"; };
+		52D5D4E61F00242A006AAE1D /* WorkOrderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkOrderItem.h; sourceTree = "<group>"; };
+		52D5D4E71F00242A006AAE1D /* WorkOrderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkOrderItem.m; sourceTree = "<group>"; };
+		52D5D4E91F002AD9006AAE1D /* Vehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
+		52D5D4EA1F002AD9006AAE1D /* Vehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
+		52D5D4EC1F005034006AAE1D /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		52D5D4ED1F005034006AAE1D /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		52D5D4EF1F005D24006AAE1D /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
+		52D5D4F01F005D24006AAE1D /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
+		52D5D4F51F0096E0006AAE1D /* ItemsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemsTableViewCell.h; path = ../ItemsTableViewCell.h; sourceTree = "<group>"; };
+		52D5D4F61F0096E0006AAE1D /* ItemsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemsTableViewCell.m; path = ../ItemsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +82,16 @@
 		52D5D4C81EFE899A006AAE1D /* Fonzie’s Garage */ = {
 			isa = PBXGroup;
 			children = (
+				52D5D4F51F0096E0006AAE1D /* ItemsTableViewCell.h */,
+				52D5D4F61F0096E0006AAE1D /* ItemsTableViewCell.m */,
 				52D5D4CC1EFE899A006AAE1D /* AppDelegate.h */,
 				52D5D4CD1EFE899A006AAE1D /* AppDelegate.m */,
+				52D5D4EC1F005034006AAE1D /* HistoryViewController.h */,
+				52D5D4ED1F005034006AAE1D /* HistoryViewController.m */,
 				52D5D4CF1EFE899A006AAE1D /* MasterViewController.h */,
 				52D5D4D01EFE899A006AAE1D /* MasterViewController.m */,
+				52D5D4E91F002AD9006AAE1D /* Vehicle.h */,
+				52D5D4EA1F002AD9006AAE1D /* Vehicle.m */,
 				52D5D4D21EFE899A006AAE1D /* DetailViewController.h */,
 				52D5D4D31EFE899A006AAE1D /* DetailViewController.m */,
 				52D5D4D51EFE899A006AAE1D /* Main.storyboard */,
@@ -72,6 +99,14 @@
 				52D5D4DA1EFE899A006AAE1D /* LaunchScreen.storyboard */,
 				52D5D4DD1EFE899A006AAE1D /* Info.plist */,
 				52D5D4C91EFE899A006AAE1D /* Supporting Files */,
+				52D5D4E31F002342006AAE1D /* WorkOrder.h */,
+				52D5D4E41F002342006AAE1D /* WorkOrder.m */,
+				52CE78541F0178BF00240AA9 /* WorkOrderModel.h */,
+				52CE78551F0178BF00240AA9 /* WorkOrderModel.m */,
+				52D5D4E61F00242A006AAE1D /* WorkOrderItem.h */,
+				52D5D4E71F00242A006AAE1D /* WorkOrderItem.m */,
+				52D5D4EF1F005D24006AAE1D /* History.h */,
+				52D5D4F01F005D24006AAE1D /* History.m */,
 			);
 			path = "Fonzie’s Garage";
 			sourceTree = "<group>";
@@ -115,6 +150,7 @@
 				TargetAttributes = {
 					52D5D4C51EFE8999006AAE1D = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 75YM5CA5X8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -158,7 +194,14 @@
 				52D5D4CE1EFE899A006AAE1D /* AppDelegate.m in Sources */,
 				52D5D4D11EFE899A006AAE1D /* MasterViewController.m in Sources */,
 				52D5D4CB1EFE899A006AAE1D /* main.m in Sources */,
+				52D5D4EE1F005034006AAE1D /* HistoryViewController.m in Sources */,
+				52D5D4EB1F002AD9006AAE1D /* Vehicle.m in Sources */,
 				52D5D4D41EFE899A006AAE1D /* DetailViewController.m in Sources */,
+				52D5D4F71F0096E0006AAE1D /* ItemsTableViewCell.m in Sources */,
+				52D5D4E81F00242A006AAE1D /* WorkOrderItem.m in Sources */,
+				52D5D4E51F002342006AAE1D /* WorkOrder.m in Sources */,
+				52CE78561F0178BF00240AA9 /* WorkOrderModel.m in Sources */,
+				52D5D4F11F005D24006AAE1D /* History.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 75YM5CA5X8;
 				INFOPLIST_FILE = "Fonzie’s Garage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.exeloncorp.Fonzie-s-Garage";
@@ -291,6 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 75YM5CA5X8;
 				INFOPLIST_FILE = "Fonzie’s Garage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.exeloncorp.Fonzie-s-Garage";
@@ -317,6 +362,7 @@
 				52D5D4E21EFE899A006AAE1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WorkOrderModel.h"
 
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController  <ModelLoadDelegate>
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
